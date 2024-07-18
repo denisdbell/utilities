@@ -1,0 +1,4 @@
+#Remove dangling images
+docker rmi $(docker images -f "dangling=true" -q)
+#Prune very dangerous
+docker system prune

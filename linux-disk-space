@@ -1,0 +1,5 @@
+#Show all volumnes and the free space
+df -h
+
+#Show top 10 largest files and folders
+sudo du -ah . | sort -rh | head -n 10
