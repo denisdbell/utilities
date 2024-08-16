@@ -1,0 +1,4 @@
+#Set azure cli
+az account set --subscription 58e14b77-2bd2-4491-9dfe-479b96e2753d
+#View activie subscription
+az account list -o table   
