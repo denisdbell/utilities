@@ -2,3 +2,7 @@
 docker rmi $(docker images -f "dangling=true" -q)
 #Prune very dangerous
 docker system prune
+#push local image to remote registry example:
+docker tag nodeapp:latest <remote-registry>/nodeapp:latest
+#Example:
+docker tag nodeapp:latest acrkub.azurecr.io/nodeapp:latest
