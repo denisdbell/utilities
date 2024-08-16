@@ -1,1 +1,6 @@
-
+#Attach AKS to your ACR: 
+az aks update -n AKSNAME -g AKSRG --attach-acr ACRNAME
+#Show AKS: 
+az aks show -g AKSRG -n AKSNAME -o table
+#(Optional) Upgrade cluster: 
+az aks upgrade -g AKSRG -n AKSNAME --kubernetest-version VERSION
