@@ -9,3 +9,6 @@ docker tag nodeapp:latest acrkub.azurecr.io/nodeapp:latest
 
 #SSH into docker container
 docker exec -it <container_name> sh
+
+#Docker logs:
+docker logs -f <container_name>
