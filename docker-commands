@@ -6,3 +6,6 @@ docker system prune
 docker tag nodeapp:latest <remote-registry>/nodeapp:latest
 #Example:
 docker tag nodeapp:latest acrkub.azurecr.io/nodeapp:latest
+
+#SSH into docker container
+docker exec -it <container_name> sh
