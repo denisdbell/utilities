@@ -4,3 +4,5 @@ az account set --subscription 58e14b77-2bd2-4491-9dfe-479b96e2753d
 az account list -o table   
 #get password from azure keyvault linux
 password=$(az keyvault secret show --name acr-password --vault-name $vault --query value -o tsv)
+#Role assignments:
+az role assignment create --assignee "d2615b45-6b4c-406f-9595-b3338445d820" --role "API Management Service Contributor" --scope <Resource Group>
