@@ -1,6 +1,9 @@
 ## Steps to identify inefficent process in java
 #.Show all processes
-top -H (get pid eg 1234)
+top -H (get pid eg 1234) 
+
+#Alternatively JPS can be used as well, this will show only java processes
+jps -l
 
 # 2.Use PID to attach the process to jstack 
 jstack 1234 
