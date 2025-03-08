@@ -1,1 +1,12 @@
+## Steps to identify inefficent process in java
+#.Show all processes
+top -H (get pid eg 1234)
 
+# 2.Use PID to attach the process to jstack 
+jstack 1234
+
+# 3. Show all threads within the process 
+jenkins top -H -p 1234 (eg 4597)
+
+# 4. Convert tread id to Hexadecimal (printf "%x\n" 4567 4597=11d7 in hex)
+jstack 1234 | grep -A 30 "nid=0x11d7"
