@@ -3,10 +3,19 @@
 top -H (get pid eg 1234)
 
 # 2.Use PID to attach the process to jstack 
-jstack 1234
+jstack 1234 
 
 # 3. Show all threads within the process 
 jenkins top -H -p 1234 (eg 4597)
 
 # 4. Convert tread id to Hexadecimal (printf "%x\n" 4567 4597=11d7 in hex)
+# this will find the specific thread which is causing the issue.
 jstack 1234 | grep -A 30 "nid=0x11d7"
+
+# 5. Dump results can be exported using
+jstack 1234 > thread-dump.txt
+
+# 6. docker cp [containername]:<container-dir> <host-dir> 
+
+# 7. Upload results thread-dump.txt
+https://fastthread.io/ft-dashboard.jsp
