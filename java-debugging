@@ -22,3 +22,6 @@ jstack 1234 > thread-dump.txt
 
 # 7. Upload results thread-dump.txt
 https://fastthread.io/ft-dashboard.jsp
+
+# 8. Create dump file to analyze heap
+jmap -dump:live,format=b,file=./heapdump.hprof <PID>
